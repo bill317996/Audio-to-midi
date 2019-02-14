@@ -120,7 +120,7 @@ if __name__ == '__main__':
     args = parser()
     for root, dirr, file in os.walk(args.input_dir):
         for filename in file:
-            if '.wav' or '.mp3' in filename:
+            if '.wav' in filename or '.mp3' in filename:
                 filepath = os.path.join(root, filename)
                 songname = filepath.split('/')[-1].split('.')[0]
                 print('=====================')
