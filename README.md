@@ -1,4 +1,4 @@
-# Audio-to-midi
+# Audio-to-midi (Vocal)
 An application of melody extraction.
 https://github.com/bill317996/Melody-extraction-with-melodic-segnet
 
