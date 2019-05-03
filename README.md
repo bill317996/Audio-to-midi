@@ -1,5 +1,5 @@
-# Audio-to-midi (Vocal)
-An application of vocal melody extraction.
+# Audio-to-midi
+An application of melody extraction.
 ### Core algoithm 
 (MSnet): https://github.com/bill317996/Melody-extraction-with-melodic-segnet
 
