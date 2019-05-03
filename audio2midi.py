@@ -276,7 +276,7 @@ if __name__ == '__main__':
     parser.add_argument('-out', action='store', dest='output_folder', default='./output/',
                         help='Path to output folder')
     parser.add_argument('-m', action="store_true", dest='main_melody', default=False,
-                        help='Extract main-melody instead vocal-meody')
+                        help='Extract main-melody instead vocal-melody')
 
     parameters = vars(parser.parse_args(sys.argv[1:]))
 
