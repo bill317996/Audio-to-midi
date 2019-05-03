@@ -35,5 +35,5 @@ optional arguments:
   -h, --help          show this help message and exit
   -in INPUT_FOLDER    path to input folder (default: ./input/)
   -out OUTPUT_FOLDER  Path to output folder (default: ./output/)
-  -m                  Extract main-melody instead vocal-meody (default: False)
+  -m                  Extract main-melody instead vocal-melody (default: False)
 ```
