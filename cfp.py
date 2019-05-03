@@ -45,7 +45,7 @@ import numpy as np
 np.seterr(divide='ignore', invalid='ignore')
 import scipy
 import scipy.signal
-import pandas as pd
+
 
 
 def STFT(x, fr, fs, Hop, h):        
@@ -250,6 +250,7 @@ def cfp_process(fpath, ypath=None, csv=False,sr=44100, hop=256, model_type='voca
     print('Data shape: '+str(W.shape))
     if ypath:
         if csv:
+            import pandas as pd
             ycsv = pd.read_csv(ypath, names = ["time", "freq"])
             gt0 = ycsv['time'].values
             gt0 = gt0[1:,np.newaxis]
