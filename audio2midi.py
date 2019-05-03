@@ -1,6 +1,5 @@
 import os, time, sys
 import numpy as np
-import pandas as pd
 from pypianoroll import Multitrack, Track
 import cfp
 import torch
