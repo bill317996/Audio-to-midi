@@ -8,7 +8,7 @@ import torch.nn.functional as F
 import argparse
 
 def smoothing(roll):
-#     step1
+#     step1  Turn consecutively pitch labels into notes.
     new_map = np.zeros(roll.shape)
     min_note_frames = 3
     last_midinote = 0
@@ -24,7 +24,7 @@ def smoothing(roll):
             count = 0
     note_map = new_map
     else_map = roll - note_map
-#     Step2
+#     Step2  Connect the breakpoint near the note.
     new_map = np.zeros(roll.shape)
     for i in range(len(else_map)):
         midinote = np.argmax(else_map[i,:])
@@ -42,7 +42,7 @@ def smoothing(roll):
                 new_map[i,midinote+1] = 1
                 else_map[i,midinote] = 0
     note_map = note_map + new_map
-#     step3
+#     step3  Turn vibrato pitch labels into notes.
     new_map = np.zeros(roll.shape)
     min_note_frames = 3
     last_midinote = 0
@@ -64,7 +64,7 @@ def smoothing(roll):
             count = 0
 
     note_map = note_map + new_map
-#     step4
+#     step4  Connect nearby notes with the same pitch label.
     last_midinote = 0
     for i in range(len(note_map)):
         midinote = np.argmax(note_map[i,:])
